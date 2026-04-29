@@ -77,13 +77,19 @@ body {
     margin: 0;
     padding: 0;
     width: 100%;
-    max-width: 480px;
     overflow-x: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     background: #FFFFFF;
+}
+
+/* Узкая полоса только на ПК */
+@media (min-width: 769px) {
+    body {
+        max-width: 480px;
+    }
 }
 
 .block1 {
