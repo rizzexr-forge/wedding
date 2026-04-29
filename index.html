@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#ebebeb">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/logo.png">
+    <title>Приглашение на свадьбу</title>
+</head>
+<body>
+    <div class="block1">
+        <div class="names">Яна и Дима</div>
+        <div class="invite">Приглашаем Вас на нашу свадьбу</div>
+    </div>
+    <div class="block2">
+        <picture>
+            <!-- <source media="(min-width: 769px)" srcset="images/last1.png"> -->
+            <img src="images/last.png" id="people" alt="Яна и Дима" draggable="false">
+        </picture>
+    </div>
+    <div class="block">
+        <div class="calendar-card">
+            <h2 class="calendar-title">Август 2026</h2>
+            <div class="calendar-grid">
+            <!-- Дни недели (опционально, можно удалить) -->
+            <div class="day">Пн</div><div class="day">Вт</div><div class="day">Ср</div>
+            <div class="day">Чт</div><div class="day">Пт</div><div class="day">Сб</div><div class="day">Вс</div>
+
+            <!-- Пустые ячейки, если месяц начинается не с понедельника -->
+            <div class="num"></div><div class="num"></div><div class="num"></div><div class="num"></div><div class="num"></div><div class="num">1</div><div class="num">2</div><div class="num">3</div>
+        
+            <!-- Числа -->
+            <div class="num">4</div><div class="num">5</div><div class="num">6</div>
+            <div class="num special-day">7</div> 
+            <div class="num">8</div><div class="num">9</div><div class="num">10</div>
+            <div class="num">11</div><div class="num">12</div><div class="num">13</div><div class="num">14</div>
+            <div class="num">15</div><div class="num">16</div><div class="num">17</div><div class="num">18</div>
+        
+            <!-- Ваша дата с сердечком -->
+            <!-- <div class="num special-day">18</div>  -->
+                
+            <div class="num">19</div><div class="num">20</div><div class="num">21</div>
+            <div class="num">22</div><div class="num">23</div><div class="num">24</div><div class="num">25</div>
+            <div class="num">26</div><div class="num">27</div><div class="num">28</div><div class="num">29</div>
+            <div class="num">30</div><div class="num">31</div>
+        </div>
+    </div>
+    <div class="block">
+        <div class="timer">
+            <div class="timer-item">
+                <div class="number" id="days">00</div>
+                <div class="label">Дней</div>
+            </div>
+            <div class="timer-item">
+                <div class="number" id="hours">00</div>
+                <div class="label">Часов</div>
+            </div>
+            <div class="timer-item">
+                <div class="number" id="minutes">00</div>
+                <div class="label">Минут</div>
+            </div>
+            <div class="timer-item">
+                <div class="number" id="seconds">00</div>
+                <div class="label">Секунд</div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Целевая дата: 7 августа 2026 года
+        const targetDate = new Date('August 7, 2026 00:00:00').getTime();
+
+        function updateTimer() {
+            const now = new Date().getTime();
+            const diff = targetDate - now;
+
+            // Математика времени
+            const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const s = Math.floor((diff % (1000 * 60)) / 1000);
+
+            // Вывод на страницу
+            document.getElementById('days').innerText = d;
+            document.getElementById('hours').innerText = h < 10 ? '0' + h : h;
+            document.getElementById('minutes').innerText = m < 10 ? '0' + m : m;
+            document.getElementById('seconds').innerText = s < 10 ? '0' + s : s;
+        }
+
+        // Запуск и обновление каждую секунду
+        setInterval(updateTimer, 1000);
+        updateTimer();
+    </script>
+    <div class="block">
+        <div class="titles">
+            Программа дня
+        </div>
+        <div class="action">
+            <div class="mini-block">
+                <div class="line">
+                    <div class="text">
+                        Роспись 
+                    </div>
+                    <div class="text">
+                        14:00 
+                    </div>
+                </div>
+
+                <div class="line">
+                    <div class="text">
+                        <b>Загс</b><br>проспект Революции, 48
+                    </div>
+                    <div class="text">
+                        <a href="https://yandex.by/maps/-/CPSZE-mE" target="_blank" rel="noopener"><img src="images/icon.png" id="location1" draggable="false"></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mini-block">
+                <div class="line">
+                    <div class="text">
+                        Банкет
+                    </div>
+                    <div class="text">
+                        17:30
+                    </div>
+                </div>
+                <div class="line">
+                    <div class="text">
+                        <b>Королевский ПАБ</b><br>ул. Краснознаменная, 62
+                    </div>
+                    <div class="text">
+                        <a href="https://yandex.by/maps/-/CPSVv-ku" target="_blank" rel="noopener"><img src="images/icon.png" id="location2" draggable="false"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="block">
+        <div class="titles">
+            Дресс-код
+        </div>
+        <div class="text" style="margin: 1vh; margin-bottom: 2vh;">
+            Празднично и удобно
+        </div>
+    </div>
+    <footer>
+
+        <div class="block">
+        <div class="titles" style="color: #fff;">
+            Контакты
+        </div>
+        <div class="text" style="margin: 1vh; color: #fff;">
+            +375 XX XXX XXXX
+        </div>
+    </div>
+
+    </footer>
+</body>
+</html>

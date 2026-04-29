@@ -1,0 +1,350 @@
+@font-face {
+    font-family: 'WeddingFont';
+    /* Любое название для удобства */
+    src: url('fonts/Better\ Land\ RUS.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'WeddingFont3';
+    /* Любое название для удобства */
+    src: url('fonts/Bakinskay\ Font\ Family/bakinskay-1-italic.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'WeddingFont2';
+    /* Любое название для удобства */
+    src: url('fonts/Futura\ Now\ Script/zhuan_FuturaNowScript-Bd.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'WeddingFont4';
+    /* Любое название для удобства */
+    src: url('fonts/Transita\ Modern\ Semibold/Transita Modern Semibold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+*,
+*::before,
+*::after {
+    -webkit-tap-highlight-color: transparent;
+    box-sizing: border-box;
+}
+
+/* === Защита от выделения текста и перетаскивания фото === */
+body {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+}
+
+img {
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    pointer-events: none;
+}
+
+/* Иконки в ссылках остаются кликабельными */
+a img {
+    pointer-events: auto;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    background: #FFFFFF;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    max-width: 480px;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #FFFFFF;
+}
+
+.block1 {
+    margin-top: 0vh;
+    padding-top: 3vh;
+    margin-bottom: 0vh;
+    padding-bottom: 3vh;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    background: #ebebeb;
+}
+
+.block2 {
+    margin-top: 0vh;
+    padding-top: 3vh;
+    margin-bottom: 3vh;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    background: linear-gradient(180deg, #ebebeb, #ffffff);
+}
+
+.block {
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.block:last-child {
+    margin-bottom: 0;
+}
+
+footer {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+footer .block {
+    margin-bottom: 0;
+}
+
+#people {
+    width: 100%;
+}
+
+.names {
+    font-family: 'WeddingFont', serif;
+    font-size: 6vh;
+    color: #2D3128;
+}
+
+.invite {
+    width: 90%;
+    font-family: 'WeddingFont', serif;
+    font-size: 3vh;
+    color: #bbc0a3;
+    /* font-weight: 500; */
+    text-align: center;
+}
+
+
+/* Основной контейнер */
+.calendar-card {
+    font-family: 'Georgia', serif;
+    /* Или ваш .otf шрифт */
+    color: #4A443E;
+    text-align: center;
+    max-width: 100%;
+    /* margin: 20px auto; */
+    /* padding: 20px; */
+}
+
+.calendar-title {
+    font-weight: normal;
+    font-size: 5vh;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+    font-family: 'WeddingFont', serif;
+    color: #6B705C;
+}
+
+/* Сетка календаря */
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    /* 7 колонок по числу дней */
+    gap: 10px 5px;
+}
+
+.day {
+    font-size: 1rem;
+    color: #8C8C8C;
+    margin-bottom: 5px;
+}
+
+.num {
+    font-size: 1.4rem;
+    padding: 5px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Стилизация сердечка */
+.special-day {
+    color: #fff;
+    z-index: 1;
+}
+
+.special-day::before {
+    content: '❤';
+    /* Символ сердечка */
+    position: absolute;
+    font-size: 2.5rem;
+    color: #6B705C;
+    /* Цвет вашего акцента из палитры */
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.6;
+}
+
+
+
+
+.titles {
+    /* text-transform: uppercase; */
+    font-family: 'WeddingFont', serif;
+    font-size: 5vh;
+    color: #6B705C;
+}
+
+.action {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.mini-block {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    border: #e6e7e0 solid 0.2vh;
+    border-radius: 2vh;
+    margin: 1vh;
+    padding: 1.5vh;
+}
+
+.line {
+    width: 100%;
+
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: center;
+    flex-direction: row;
+
+
+}
+
+.text {
+    /* font-family: 'Georgia', serif; Или ваш .otf шрифт */
+    font-family: 'WeddingFont4', serif;
+    font-size: 1.5vh;
+    color: #6B705C;
+}
+
+#location1,
+#location2 {
+    width: 3vh;
+}
+
+
+
+
+
+
+
+
+
+
+.timer {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    /* Управляй общим расстоянием между блоками здесь */
+    gap: 5px;
+}
+
+.timer-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* УБРАНО: width: 70% (это была главная проблема) */
+    /* УБРАНО: padding: 15px (это создавало лишний вакуум вокруг) */
+
+    width: 80px;
+    /* Фиксированная ширина, чтобы цифры не прыгали */
+    margin: 0;
+}
+
+.number {
+    font-size: 1.8rem;
+    font-weight: bold;
+    font-family: 'Georgia', serif;
+    color: #bbc0a3;
+    line-height: 1;
+    /* Чтобы не было лишнего места сверху/снизу */
+
+    /* Это свойство важно оставить для стабильности */
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+.label {
+    font-size: 1rem;
+    text-transform: lowercase;
+    color: #888;
+    margin-top: 0;
+    /* Убрал отступ, чтобы подпись была ближе к цифре */
+    font-family: 'Georgia', serif;
+}
+
+
+
+
+
+
+footer {
+    background: #3b6d3d;
+    width: 100%;
+    color: #fff;
+
+    margin: 0;
+    padding: 0;
+    padding-bottom: 2vh;
+}
