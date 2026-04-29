@@ -354,3 +354,79 @@ footer {
     padding: 0;
     padding-bottom: 2vh;
 }
+
+/* ===== АДАПТИВНОСТЬ ДЛЯ ТЕЛЕФОНОВ ===== */
+@media (max-width: 768px) {
+    .names {
+        font-size: 2.5rem;
+    }
+
+    .invite {
+        font-size: 1.1rem;
+        width: 85%;
+    }
+
+    .calendar-title {
+        font-size: 2rem;
+        margin-bottom: 12px;
+    }
+
+    .titles {
+        font-size: 2rem;
+    }
+
+    .text {
+        font-size: 0.95rem;
+    }
+
+    #location1,
+    #location2 {
+        width: 24px;
+    }
+
+    .mini-block {
+        width: 85%;
+        padding: 12px;
+        margin: 6px;
+        border-radius: 12px;
+    }
+
+    .line {
+        margin-top: 6px;
+        margin-bottom: 6px;
+    }
+
+    .block {
+        margin-top: 2vh;
+        margin-bottom: 2vh;
+    }
+
+    .timer-item {
+        width: 70px;
+    }
+
+    .number {
+        font-size: 1.5rem;
+    }
+
+    .label {
+        font-size: 0.85rem;
+    }
+
+    .num {
+        font-size: 1.2rem;
+        padding: 3px;
+    }
+
+    .day {
+        font-size: 0.85rem;
+    }
+
+    .calendar-grid {
+        gap: 6px 3px;
+    }
+
+    .special-day::before {
+        font-size: 2rem;
+    }
+}
